@@ -35,6 +35,8 @@ You can fix it a couple of ways.
 
 1. Using IIFE passing variable i
 
+With IIFE, you can pass the variable i so that the function inside IIFE can keep the value when it was passed.
+
 ```
 var $buttons = $("button");
 var len = $buttons.length;
@@ -48,10 +50,9 @@ for(var i = 0; i < len; i++) {
 }
 ```
 
-With IIFE, you can pass the variable i so that the function inside IIFE can keep the value when it was passed.
-
-
 2. Call external function
+
+If you don't like IIFE, you can make it external function.
 
 ```
 var $buttons = $("button");
@@ -68,5 +69,3 @@ function clickHandler(_i) {
 }
 
 ```
-
-If you don't like IIFE, you can make it external function.
