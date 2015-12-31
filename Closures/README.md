@@ -1,8 +1,8 @@
 # Common mistakes
 
-Closures are powerful feature in JavaScript. However, if you misuse or overuse it causes wrong result and memory leak. Here I am going to show some common mistakes in reality. 
+Closures are powerful feature in JavaScript. However, if you misuse or overuse it causes wrong results and memory leak. Here I am going to show some common mistakes in reality.
 
-##### In `for` loop
+### In `for` loop
 
 Let's supposed that you want to put 5 buttons and show button id when it is clicked.
 
@@ -31,9 +31,9 @@ for(var i = 0; i < len; i++) {
 
 If you run it, you can find all buttons show 5 which is the last value of `i`. It is because closures have been created due to the click event handler function which refers to the variable `i` which is defined outside of the handler. So all the closures refer to the last value of `i`.
 
-You can fix it a couple of ways. 
+You can fix it a couple of ways.
 
-1. Using IIFE passing variable i
+##### 1.Using IIFE passing variable `i`
 
 With IIFE, you can pass the variable i so that the function inside IIFE can keep the value when it was passed.
 
@@ -50,7 +50,7 @@ for(var i = 0; i < len; i++) {
 }
 ```
 
-2. Call external function
+##### 2.Call external function
 
 If you don't like IIFE, you can make it external function.
 
