@@ -67,5 +67,6 @@ function clickHandler(_i) {
     alert('Script3: ' + (_i+1));
   });
 }
-
 ```
+
+When you keep it mind that in Closures the scope is defined lexically, you can understand the issue. 
