@@ -6,6 +6,10 @@
     
     var o = {x: 1, x: 2};
     console.log('> Duplicated properties: ', o);
+
+    function sum(a, a, c) {
+        return a + b + c;
+    }
     
     console.log('===============================');
     console.log('         ');
@@ -23,11 +27,25 @@
     }
 
     try {
-        var oo = {x: 1, x: 2};
-        console.log('# Duplicated variable: ', oo);
+        var ooo = {x: 1, x: 2};
+        console.log('# Duplicated variable: ', ooo);
     } catch (e) {
-        console.log('# Duplicated variable: ', e);        
+        console.log('# error: Duplicated variable: ', e);        
     } 
     
     console.log('===============================');        
 })();
+
+function sum() {
+    "use strict";
+
+    try {        
+        var sum = function(a, a, c) {
+            var res;
+            res = a + b + c;    
+            return res;
+        }        
+    } catch(e) {
+        console.log('# Error: ', e);    
+    }
+}
