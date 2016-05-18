@@ -8,7 +8,7 @@
 //   }); 
 // }
 
-// for (i = 0; i < len; i++) {
+// for (var i = 0; i < len; i++) {
 //   handler(i+1);
 // }
 
@@ -17,7 +17,7 @@
   var buttons = document.querySelectorAll('.btn');
   var len = buttons.length;
 
-  for (i = 0; i < len; i++) {
+  for (var i = 0; i < len; i++) {
     buttons[i].addEventListener('click', (
       function(i) {
         return function() {
